@@ -1,0 +1,8 @@
+{
+	"less.compile": {
+		"compress": false,
+		"sourceMap": true,
+		"main": "${workspaceFolder}\\less\\main.less",
+		"out": "../css/main.min.css"
+	}
+}

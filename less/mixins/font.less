@@ -1,0 +1,21 @@
+@font-groups: {
+  sans: Arial, Helvetica, sans-serif;
+  serif: Georgia, 'Times New Roman', Times, serif;
+}
+
+#font {
+
+  .settings(@size: 1rem, @fw: 400) {
+    font-size: @size;
+    font-weight: @fw;
+  }
+
+  .family() when (default()) {
+    font-family: @settings[primary-font], @font-groups[sans];
+  }
+
+  .family(@type) when (@type = serif) {
+    font-family: @settings[secondary-font], @font-groups[serif];
+  }
+
+}

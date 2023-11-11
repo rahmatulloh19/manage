@@ -1,0 +1,326 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-display: swap;
+  font-weight: 300;
+  src: url("../fonts/bevietnamlight.woff2") format("woff2"), url("../fonts/bevietnamlight.woff") format("woff");
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/bevietnamregular.woff2") format("woff2"), url("../fonts/bevietnamregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/bevietnamregularitalic.woff2") format("woff2"), url("../fonts/bevietnamregularitalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-display: swap;
+  font-weight: 500;
+  src: url("../fonts/bevietnammedium.woff2") format("woff2"), url("../fonts/bevietnammedium.woff") format("woff");
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/bevietnambold.woff2") format("woff2"), url("../fonts/bevietnambold.woff") format("woff");
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-display: swap;
+  font-weight: 800;
+  src: url("../fonts/bevietnamextrabold.woff2") format("woff2"), url("../fonts/bevietnamextrabold.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Be Vietnam Pro", "Arial", sans-serif;
+}
+img {
+  display: block;
+  height: auto;
+}
+.site-main {
+  flex-grow: 1;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  clip: rect(0 0 0 0);
+}
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media only screen and (min-width: 450px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+.unstyled-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.get-started {
+  min-width: 137px;
+  display: inline-block;
+  padding: 12px 20px 13px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f3603c;
+  border-radius: 22px;
+  transition: all 0.3s;
+}
+.site-header__start:hover {
+  background-color: #f98f75;
+  box-shadow: 0px 16px 10px -9px #f98f75;
+}
+.site-header__start:active {
+  background-color: #f79b84;
+}
+/* Site header styles begin */
+.site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.site-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo__img {
+  margin-top: 5px;
+}
+.site-header__menu {
+  width: 25px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../images/hamburgermenu.svg");
+}
+.site-header__navigation {
+  display: none;
+  visibility: hidden;
+}
+.site-header__start {
+  display: none;
+  visibility: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .site-header {
+    padding-top: 56px;
+    padding-bottom: 60px;
+  }
+  .logo__img {
+    width: 147px;
+    height: 24px;
+  }
+  .site-header__menu {
+    display: none;
+    visibility: hidden;
+  }
+  .site-header__navigation {
+    display: block;
+    visibility: visible;
+  }
+  .site-header__start {
+    display: block;
+    visibility: visible;
+  }
+  .site-header__list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    column-gap: 32px;
+  }
+  .site-header__link {
+    font-size: 13px;
+    font-weight: 500;
+    color: #242d52;
+    text-decoration-line: none;
+    transition: opacity, 0.3s;
+  }
+  .site-header__link:hover {
+    opacity: 0.5;
+  }
+}
+/* Site header styles end */
+/* Section hero styles begin */
+.hero {
+  padding-bottom: 93px;
+}
+.hero__img {
+  width: 100%;
+}
+/* Section hero styles end */
+/*# sourceMappingURL=./main.min.css.map */

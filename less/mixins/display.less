@@ -1,0 +1,209 @@
+/*
+ * This file contains mixins which include common style sets used for display.
+ * Usually benefecial if there are 2 or more rules declared.
+ */
+
+#display {
+  /*
+  * Use this for CSS Grid Parent Elements:
+  */
+
+  .grid(@cols: 2, @rows: auto, @gap: 0) when (default()) {
+    display: grid;
+    grid-template-columns: repeat(@cols, 1fr);
+    grid-template-rows: @rows;
+    gap: @gap;
+  }
+
+  .grid(@type, @cols: 2, @rows: auto, @gap: 0) when (@type = center) {
+    display: grid;
+    grid-template-columns: repeat(@cols, 1fr);
+    grid-template-rows: @rows;
+    gap: @gap;
+    place-items: center center;
+    justify-content: center;
+  }
+
+  /*
+   * Center all parent's children
+   */
+
+  .flex(@justify) when (@justify = space) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /*
+   * Align children to left of container
+   */
+
+  .flex(@align) when (@align = start) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+
+  /*
+   * Align children to right of container
+   */
+
+  .flex(@align) when (@align = end) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+  }
+
+  /*
+   * Flexbox Grid alignment
+   */
+
+  .flex(@align) when (@align = grid) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /*
+   * Set color and background color
+   */
+
+  .colors(@color: black, @background: white) {
+    color: @color;
+    background-color: @background;
+  }
+
+  /*
+   * Set Width & Height
+   */
+
+  .dimensions(@width: 100px, @height: auto) when (default()) {
+    width: @width;
+    height: @height;
+  }
+
+  /*
+   * Width & Height always equal
+   */
+
+  .dimensions(@type, @value: 100px) when (@type = equal) {
+    #display.dimensions(@value, @value);
+  }
+
+  /*
+   * Set width, min-width & max-width
+   */
+  .width(@width: auto, @min: auto, @max: 100%) when (default()) {
+    width: @width;
+    min-width: @min;
+    max-width: @max;
+  }
+
+  /*
+   * Set min-width & max-width
+   */
+  .width(@type, @min: auto, @max: 100%) when (@type = minmax) {
+    min-width: @min;
+    max-width: @max;
+  }
+
+  /*
+   * Margin and padding in 1 line of code
+   */
+
+  .space(@margin: 0, @padding: 0) when (default()) {
+    margin: @margin;
+    padding: @padding;
+  }
+
+  /*
+   * Always zero spacing inside and outside element
+   */
+
+  .space(@type) when (@type = 0) {
+    #display.space(0, 0);
+  }
+
+  /*
+   * Equal space inside and outside of element
+   */
+
+  .space(@type, @value: 0) when (@type = equal) {
+    #display.space(@value, @value);
+  }
+
+  /*
+   * Retains height of parent element when children elements are 
+   * floated left or right.
+   */
+
+  .clearfix() {
+
+    &::before,
+    &::after {
+      #display.pseudo('', table);
+    }
+
+    &::after {
+      clear: both;
+    }
+  }
+
+  /*
+   * For quick display on ::before & ::after Pseudo elements.
+   */
+
+  .pseudo(@content: '', @type: block) {
+    content: @content;
+    display: @type;
+  }
+
+  /*
+   * Hide by default, display on Laptop
+   */
+
+  .laptop() {
+    display: none;
+
+    @media @laptop-small-min {
+      display: block;
+    }
+  }
+
+  /*
+   * Hide by default, display on Desktop
+   */
+
+  .desktop() {
+    display: none;
+
+    @media @desktop-small-min {
+      display: block;
+    }
+  }
+
+  /*
+   * Hide by default and display on tablet and desktop
+   */
+
+  .tablet() {
+    display: none;
+
+    @media @tablet-small-min {
+      display: block;
+    }
+  }
+
+  /*
+   * Hide on desktop, Display on Mobile
+   */
+
+  .mobile() {
+    display: none;
+
+    @media @mobile-large-max {
+      display: block;
+    }
+  }
+
+}
