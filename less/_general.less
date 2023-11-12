@@ -13,6 +13,18 @@ body {
 	flex-direction: column;
 	height: 100%;
 	font-family: @font;
+	background-image: url("../images/decoration.svg"), url("../images/decoration.svg");
+	background-repeat: no-repeat;
+	background-position-x: calc(50% + 83px), calc(50% + 280px);
+	background-position-y: -133px, 390px;
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		background-size: 680px;
+		background-position-x: calc(50% + 380px), calc(50% + 280px);
+		background-position-y: -52px, 1390px;
+	}
 }
 
 img {

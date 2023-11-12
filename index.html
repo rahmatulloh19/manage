@@ -45,13 +45,39 @@
 		</header>
 		<!-- Site header end -->
 		<!-- Site main begin -->
-		<!-- <main class="site-main">
+		<main class="site-main">
+			<!-- Section hero styles started -->
 			<section class="site-main__hero hero">
 				<div class="container">
-					<img class="hero__img" src="./images/Group 19 Copy.svg" width="318" height="286" alt="" />
+					<div class="hero__inner">
+						<picture class="hero__picture">
+							<source
+								media="(min-width: 768px)"
+								srcset="./images/heroimgtablet.png 1x, ./images/heroimgtablet@2x.png 2x"
+								width="540"
+								height="485" />
+							<!-- Retina image -->
+							<img
+								class="hero__img"
+								src="./images/heroimg.png"
+								alt="In the picture showed diagrams"
+								srcset="./images/heroimg.png 1x, ./images/heroimg@2x.png 2x" />
+						</picture>
+						<div class="hero__content">
+							<h1 class="hero__title">Bring everyone together to build better products.</h1>
+							<div class="hero__desc-wrapper">
+								<p class="hero__desc">
+									Manage makes it simple for software teams to plan day-to-day tasks while keeping
+									the larger team goals in view.
+								</p>
+							</div>
+							<a class="hero__link get-started" href="#">Get Started</a>
+						</div>
+					</div>
 				</div>
 			</section>
-		</main> -->
+			<!-- Section hero styles finished -->
+		</main>
 		<!-- Site main end -->
 	</body>
 </html>
