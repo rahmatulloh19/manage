@@ -205,6 +205,13 @@ body {
     background-position-y: -52px, 1390px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  body {
+    background-size: 680px;
+    background-position-x: calc(50% + 380px), calc(50% - 660px);
+    background-position-y: -52px, 1063px;
+  }
+}
 img {
   display: block;
   height: auto;
@@ -276,6 +283,7 @@ img {
   border: none;
   background-color: transparent;
   background-image: url("../../images/hamburgermenu.svg");
+  cursor: pointer;
 }
 .site-header__navigation {
   display: none;
@@ -443,7 +451,7 @@ img {
 }
 .different__desc {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 60px;
   font-size: 13px;
   font-weight: normal;
   line-height: 28px;
@@ -453,20 +461,84 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  list-style-position: inside;
+  list-style-type: none;
 }
 .different__list--internal {
   display: none;
   visibility: hidden;
 }
+.different__list--external {
+  margin-left: 16px;
+}
+.different__list--external .different__items:not(:last-child) {
+  margin-bottom: 47px;
+}
+.different__subtitle-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-right: 20px;
+  border-top-left-radius: 39px;
+  border-bottom-left-radius: 39px;
+  background-color: #fff0ec;
+}
+.different__subtitle-wrapper::before {
+  display: block;
+  padding: 6px 23px 10px 25px;
+  font-weight: 700;
+  letter-spacing: -0.286px;
+  color: #fff;
+  text-align: center;
+  background-color: #f3603c;
+  border-radius: 39px;
+  content: "1";
+}
+.different__subtitle-wrapper--middle::before {
+  content: "2";
+}
+.different__subtitle-wrapper--end::before {
+  content: "3";
+}
+.different__subtitle {
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  color: #242d52;
+  letter-spacing: -0.286px;
+}
+.different__items-desc {
+  padding-right: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  color: rgba(36, 45, 82, 0.5025);
+}
 @media only screen and (min-width: 375px) {
   .different__desc {
+    font-size: 14px;
+  }
+  .different__subtitle {
+    font-size: 16px;
+  }
+  .different__items-desc {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 768px) {
   .different {
     padding-bottom: 165px;
+  }
+  .different__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 25px;
   }
   .different__list--external {
     display: none;
@@ -475,6 +547,41 @@ img {
   .different__list--internal {
     display: block;
     visibility: visible;
+  }
+  .different__list--internal .different__subtitle-wrapper {
+    column-gap: 28px;
+    padding-left: 0;
+    background-color: transparent;
+  }
+  .different__items {
+    max-width: 445px;
+  }
+  .different__items:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .different__desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .different__content {
+    max-width: 448px;
+    min-width: 420px;
+    text-align: left;
+  }
+  .different__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+  .different__desc-wrapper {
+    max-width: 330px;
+    margin-left: 0;
+  }
+  .different__subtitle {
+    margin-left: 0;
+  }
+  .different__items-desc {
+    padding-right: 0;
+    padding-left: 95px;
   }
 }
 /* Section different styles finished */
