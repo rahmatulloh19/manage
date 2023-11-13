@@ -1,0 +1,69 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+/* Section different styles started */
+
+.different {
+	padding-bottom: 62px;
+}
+
+.different__content {
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.different__title {
+	.default-text(13px, 30px, 800, 45px, @main-color);
+	letter-spacing: -0.619px;
+}
+
+.different__desc-wrapper {
+	max-width: 289px;
+	margin: 0 auto;
+}
+
+.different__desc {
+	.default-text(0, 13px, normal, 28px, fade(@main-color, 50.25%));
+}
+
+.different__list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-position: inside;
+}
+
+.different__list--internal {
+	.hide-element();
+}
+
+.responsive-different-mobile() {
+	.different__desc {
+		font-size: 14px;
+	}
+}
+
+.responsive-different-tablet() {
+	.different {
+		padding-bottom: 165px;
+	}
+
+	.different__list--external {
+		.hide-element();
+	}
+
+	.different__list--internal {
+		.unhide-element();
+	}
+}
+
+@media only screen and (min-width: 375px) {
+	.responsive-different-mobile();
+}
+
+@media only screen and (min-width: 768px) {
+	.responsive-different-tablet();
+}
+
+/* Section different styles finished */

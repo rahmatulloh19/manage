@@ -351,6 +351,7 @@ img {
   margin-bottom: 9px;
   font-size: 30px;
   font-weight: 700;
+  line-height: normal;
   color: #242d52;
 }
 .hero__desc-wrapper {
@@ -363,6 +364,7 @@ img {
   margin-bottom: 29px;
   font-size: 14px;
   font-weight: 300;
+  line-height: 28px;
   color: rgba(36, 45, 82, 0.5025);
 }
 @media only screen and (min-width: 375px) {
@@ -417,4 +419,63 @@ img {
   }
 }
 /* Section hero styles finished */
+/* Section different styles started */
+.different {
+  padding-bottom: 62px;
+}
+.different__content {
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+.different__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 45px;
+  color: #242d52;
+  letter-spacing: -0.619px;
+}
+.different__desc-wrapper {
+  max-width: 289px;
+  margin: 0 auto;
+}
+.different__desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 28px;
+  color: rgba(36, 45, 82, 0.5025);
+}
+.different__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+.different__list--internal {
+  display: none;
+  visibility: hidden;
+}
+@media only screen and (min-width: 375px) {
+  .different__desc {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .different {
+    padding-bottom: 165px;
+  }
+  .different__list--external {
+    display: none;
+    visibility: hidden;
+  }
+  .different__list--internal {
+    display: block;
+    visibility: visible;
+  }
+}
+/* Section different styles finished */
 /*# sourceMappingURL=./main.min.css.map */
