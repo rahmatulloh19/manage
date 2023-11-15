@@ -8,6 +8,7 @@
 	background-image: url("../../images/articlebg.png");
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .article__inner {
@@ -53,8 +54,28 @@
 	}
 }
 
+/* Retina background images */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min--moz-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 2/1),
+	only screen and (min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi),
+	only screen and (min-resolution: 2dppx) {
+	/* Retina-specific stuff here */
+
+	.article {
+		background-image: url("../../images/articlebg@2x.png");
+	}
+}
+
 #responsive-article() {
 	.tablet() {
+		.article {
+			padding: 62px 0;
+			background-image: url("../../images/articletabletbg.png");
+		}
+
 		.article__inner {
 			.flexbox(@ai:center);
 			text-align: left;
@@ -70,6 +91,21 @@
 			font-size: 40px;
 			line-height: 44px;
 			letter-spacing: -0.714px;
+		}
+
+		/* Retina background images */
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (min--moz-device-pixel-ratio: 2),
+			only screen and (-o-min-device-pixel-ratio: 2/1),
+			only screen and (min-device-pixel-ratio: 2),
+			only screen and (min-resolution: 192dpi),
+			only screen and (min-resolution: 2dppx) {
+			/* Retina-specific stuff here */
+
+			.article {
+				background-image: url("../../images/articletabletbg@2x.png");
+			}
 		}
 	}
 }

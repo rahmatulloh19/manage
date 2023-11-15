@@ -929,4 +929,90 @@ img {
   }
 }
 /* Costumer section styles finished */
+/* Article styles started */
+.article {
+  padding: 91px 0;
+  background-image: url("../../images/articlebg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.article__inner {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+.article__title-wrapper {
+  max-width: 355px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.article__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.article__link {
+  min-width: 137px;
+  display: inline-block;
+  padding: 12px 20px 13px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f3603c;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 22px;
+  transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+.article__link:hover {
+  opacity: 0.5;
+  background-color: #fff;
+  box-shadow: 0px 15px 15px -10px #db5943;
+}
+.article__link:active {
+  background-color: #fff;
+}
+/* Retina background images */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+  .article {
+    background-image: url("../../images/articlebg@2x.png");
+  }
+}
+@media only screen and (min-width: 768px) {
+  .article {
+    padding: 62px 0;
+    background-image: url("../../images/articletabletbg.png");
+  }
+  .article__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .article__title-wrapper {
+    max-width: 455px;
+    margin: 0;
+  }
+  .article__title {
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.714px;
+  }
+  /* Retina background images */
+}
+@media only screen and (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 768px) and only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 768px) and only screen and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and only screen and (min-resolution: 192dpi), only screen and (min-width: 768px) and only screen and (min-resolution: 2dppx) {
+  .article {
+    background-image: url("../../images/articletabletbg@2x.png");
+  }
+}
+/* Article styles finished */
+/* Site main styles end */
 /*# sourceMappingURL=./main.min.css.map */
