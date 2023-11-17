@@ -1,3 +1,5 @@
+// Slick js styles
+
 $(document).ready(function () {
 	$(".costumer__list").slick({
 		infinite: true,
@@ -27,4 +29,25 @@ $(document).ready(function () {
 			},
 		],
 	});
+});
+
+// Menu open codes here
+
+// invalid event of input
+
+const elForm = document.querySelector(".site-footer__form");
+const elInputWrapper = document.querySelector(".site-footer__input-wrapper");
+const elInput = document.querySelector(".site-footer__input");
+
+elForm.addEventListener("submit", (evt) => {
+	elInputWrapper.innerHTML = "";
+	elInputWrapper.appendChild(elInput);
+	evt.preventDefault();
+
+	if (elInput.value.length < 8) {
+		elInputWrapper.classList.add("invalid");
+		elInputWrapper.append("Please insert a valid email");
+	} else {
+		elInputWrapper.classList.remove("invalid");
+	}
 });
