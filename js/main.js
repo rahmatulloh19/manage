@@ -51,3 +51,11 @@ elForm.addEventListener("submit", (evt) => {
 		elInputWrapper.classList.remove("invalid");
 	}
 });
+
+// Site menu JavaScript codes here
+
+const elBtn = document.querySelector(".site-header__menu");
+
+elBtn.addEventListener("click", () => {
+	document.body.classList.toggle("menu-open");
+});
