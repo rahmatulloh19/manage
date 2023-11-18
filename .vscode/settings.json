@@ -2,6 +2,7 @@
 	"less.compile": {
 		"compress": false,
 		"sourceMap": true,
+		"autoprefixer": "> 5%, last 4 Chrome versions, not ie 6-9",
 		"main": "${workspaceFolder}\\less\\main.less",
 		"out": "../css/main.min.css"
 	}
