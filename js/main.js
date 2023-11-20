@@ -59,3 +59,5 @@ const elBtn = document.querySelector(".site-header__menu");
 elBtn.addEventListener("click", () => {
 	document.body.classList.toggle("menu-open");
 });
+
+AOS.init();
